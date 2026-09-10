@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
+body,
+input {
+    font-family: "Chocolate Classical Sans", -apple-system, Helvetica, Arial, sans-serif;
+}
+/* ---------------------------------------------------------------- 留言區
+   元件由 docs/javascripts/comments.js 產生，容器見 overrides/main.html。 */
+#pltc-comments { margin-top: 3rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest); }
+#pltc-comments .cm-title { margin: 0 0 .3rem; font-size: 1.1rem; }
+#pltc-comments .cm-note { margin: 0 0 1.2rem; font-size: .75rem;
+  color: var(--md-default-fg-color--light); }
+#pltc-comments .cm-list { list-style: none; margin: 0; padding: 0; }
+#pltc-comments .cm-list--nested { margin: .8rem 0 0 1.2rem;
+  border-left: 2px solid var(--md-default-fg-color--lightest); padding-left: .9rem; }
+#pltc-comments .cm-item { margin-bottom: 1.1rem; }
+#pltc-comments .cm-item--admin > .cm-body { border-left: 3px solid var(--md-accent-fg-color);
+  padding-left: .6rem; }
+#pltc-comments .cm-head { display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap; }
+#pltc-comments .cm-author { font-weight: 600; font-size: .85rem; }
+#pltc-comments .cm-time { font-size: .72rem; color: var(--md-default-fg-color--light); }
+#pltc-comments .cm-body { white-space: pre-wrap; overflow-wrap: anywhere; margin: .25rem 0; }
+#pltc-comments .cm-reply-btn, #pltc-comments .cm-cancel {
+  background: none; border: none; padding: 0; cursor: pointer; font-size: .75rem;
+  color: var(--md-accent-fg-color); }
+#pltc-comments .cm-empty { color: var(--md-default-fg-color--light); font-size: .85rem; }
+#pltc-comments .cm-form { display: flex; flex-direction: column; gap: .6rem; margin-top: 1.5rem; }
+#pltc-comments .cm-name-input, #pltc-comments .cm-body-input {
+  font: inherit; padding: .5rem .7rem; border-radius: .3rem; width: 100%;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color); }
+#pltc-comments .cm-body-input { min-height: 6rem; resize: vertical; }
+#pltc-comments .cm-submit { align-self: flex-start; font: inherit; cursor: pointer;
+  padding: .45rem 1.1rem; border: none; border-radius: .3rem;
+  background: var(--md-accent-fg-color); color: var(--md-accent-bg-color); }
+#pltc-comments .cm-submit:disabled { opacity: .6; cursor: progress; }
+#pltc-comments .cm-status:empty { display: none; }
+#pltc-comments .cm-status { font-size: .8rem; margin: 0; }
+#pltc-comments .cm-reply-hint { font-size: .8rem; margin: 0; display: flex; gap: .6rem; }
+/* 蜜罐欄位：對真人隱藏，但不用 display:none（部分機器人會略過那類欄位） */
+#pltc-comments .cm-hp { position: absolute; left: -9999px; width: 1px; height: 1px;
+  opacity: 0; pointer-events: none; }
